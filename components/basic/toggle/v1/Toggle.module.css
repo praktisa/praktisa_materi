@@ -1,0 +1,16 @@
+.target__style{
+    width: 100%;
+    position: fixed;
+    background: slateblue;
+    z-index: 20;
+    top:0;
+    padding: 50px;
+}
+
+.target{
+    display: none;
+}
+
+.toggler:checked ~ .target{
+    display: block;
+}

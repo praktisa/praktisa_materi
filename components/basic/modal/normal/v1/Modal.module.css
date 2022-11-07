@@ -1,0 +1,17 @@
+.layout{
+    width: 100%;
+    position: fixed;
+
+    background: pink;
+    z-index: 10;
+    
+    top:0;
+}
+
+.layout{
+    display: none;
+}
+
+.toggler:checked ~ .layout{
+    display: block;
+}

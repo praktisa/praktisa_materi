@@ -1,0 +1,84 @@
+@media only screen and (min-width: 1050px) {
+    .layout{
+        position: sticky;
+        top:0;
+        
+    }
+}
+
+
+.layout{
+    width: 80px;
+    background: inherit;
+
+    display: grid;
+    grid-template-areas: "logo" "." "menu" "." "user";
+    grid-template-rows: 0.15fr 0.2fr 0.3fr 0.2fr 0.15fr;
+   
+    height: 100vh;
+    position: sticky;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+     font-size: 20px;
+}
+
+.logo, .user, .menu{
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.menu{
+    grid-area: menu;
+    
+}
+
+.user{
+    grid-area: user;
+}
+
+.user__mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+    .layout{
+        width: 100%;
+        height: 75px;
+        position: fixed !important;
+        bottom: 0;
+        
+    }
+
+
+    .logo, .user{
+        display: none;
+    }
+
+    .menu{
+        grid-area: menu;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-items: center;
+        /* margin-bottom: 30px; */
+        
+    }
+
+    .user__mobile{
+        display: block;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .layout{
+        background: #fafbfc;
+        color: #121212;
+    }
+}

@@ -1,0 +1,53 @@
+.container{
+    padding: 7px 14px;
+    /* transition: 0.4s ease ; */
+    /* border-radius: 7px; */
+    
+}
+
+.stable{
+    padding: 7px 14px;
+    transition: 0.4s ease;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;	
+	-moz-border-radius: 7px;
+}
+
+.stable:hover{
+    background: #ccc;
+}
+
+.current{
+    background: #fafbfc;
+    color: #121212;
+    font-weight: bold;
+    animation: current 0.4s ease;
+    padding: 7px 14px;
+    font-weight: bold;
+
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;	
+	-moz-border-radius: 7px;
+}
+
+@keyframes current {
+  0% {
+        padding: 0;
+       
+        opacity: 0;
+    }
+  100% {
+        padding: 7px 14px;
+        
+        opacity: 1;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+  .current{
+        background: #121212;
+        color: #fafbfc;
+    }
+}

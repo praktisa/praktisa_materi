@@ -1,0 +1,44 @@
+.layout{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas: ". assigner target .";
+    height: 100vh;
+    gap: 10px;
+}
+
+.target::-webkit-scrollbar,.assigner::-webkit-scrollbar {
+  width: 2px;
+}
+ 
+.target::-webkit-scrollbar-track, .assigner::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.target::-webkit-scrollbar-thumb, .assigner::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.target{
+  grid-area: target;
+}
+
+.assigner{
+  grid-area: assigner;
+}
+
+.assigner h3, .target h3{
+  text-align: center;
+  
+}
+
+
+.target, .assigner{
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    overflow-y: scroll;
+
+    /* background: red; */
+}
+

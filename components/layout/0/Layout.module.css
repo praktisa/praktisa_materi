@@ -1,0 +1,33 @@
+.layout{
+    display: grid;
+    grid-template-areas: "navbar content"; 
+    grid-template-columns: 0.05fr 1fr;
+    
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+.content{
+    grid-area: content;
+}
+
+@media only screen and (max-width: 1050px) {
+  
+    .layout{
+        display: grid;
+        grid-template-areas: "content" "navbar";
+        grid-template-columns:  1fr ;
+    }
+
+    .content{
+        grid-area: content;
+    }
+
+    .navbar{
+        grid-area: navbar;
+        z-index: 9999 
+    }
+}
+
